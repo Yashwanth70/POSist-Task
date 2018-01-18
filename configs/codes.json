@@ -1,0 +1,9 @@
+{
+	"Success": 200,
+	"Bad_Request": 400,
+	"Not_Found": 404,
+	"Unauthorized": 401,
+	"Invalide_Token": 410,
+	"Token_Missing": 411,
+	"Key_Missing": 412
+}

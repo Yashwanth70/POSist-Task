@@ -1,0 +1,14 @@
+{
+	"Bad_Request" : "Unable to procced request",
+	"Invalide_Token": "Failed to authenticate token.",
+	"Token_Missing": "No token provided.",
+	"User_Reg": "User Register Successfully",
+	"Wrong_Pass": "Authentication failed. Wrong password.",
+	"Login" : "Login Successfully",
+	"Data_Find": "Data find successfully",
+	"Key_Missing": " is missing in Request",
+	"Cust_Reg": "Customer Register Successfully",
+	"Cust_Update": "Customer Updated Successfully",
+	"Cust_Remove": "Customer Remove Successfully",
+	"Cust_Find": "Customer Find Successfully"
+}

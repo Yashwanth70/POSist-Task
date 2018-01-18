@@ -1,0 +1,35 @@
+<div class="animated fadeIn" ng-controller="CustomerCtrl">
+    <div class="row">
+        <div class="card form-control">
+            <div class="card-header">
+                Customer Report
+            </div>
+            <div class="card-block">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Customer Name </th>
+                            <th> Mobile </th>
+                            <th> Phone</th>
+                            <th>Email </th>
+                            <th>No Of Bills </th>
+                            <th>Amount</th>
+                            <th>Avg Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{customerReport.name}}</td>
+                            <td>{{customerReport.mobile}}</td>
+                            <td>{{customerReport.phone}}</td>
+                            <td>{{customerReport.email}}</td>
+                            <td>{{customerReport.totalBills}}</td>
+                            <td>{{customerReport.total}}</td>
+                            <td>{{customerReport.avgAmount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

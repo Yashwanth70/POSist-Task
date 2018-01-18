@@ -1,0 +1,79 @@
+<div class="animated fadeIn" ng-controller="CustomerCtrl">
+    <div class="row">
+        <div class="col-sm-10 offset-sm-1">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Customer</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-block">
+                    <div class="form-group">
+                        <label for="company">Name *</label>
+                        <input type="text" ng-model="customer.name" class="form-control" id="name" placeholder="Enter Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vat">Mobile Number *</label>
+                        <input type="text" ng-model="customer.mobile" class="form-control" id="mobile" placeholder="Enter Mobile">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street">Phone Numer *</label>
+                        <input type="text" class="form-control" ng-model="customer.phone" id="phone" placeholder="Enter Phone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street">Date Of Birth *</label>
+                        <input type="text" ng-model="customer.dob" class="form-control" id="dob" placeholder="MM/DD/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="street">Email *</label>
+                        <input type="text" ng-model="customer.email" class="form-control" id="email" placeholder="Enter Email Address">
+                    </div>
+                    <!--/.col-->
+                    <div class=" row col-sm-12 col-md-12">
+                        <div class="col-md-12" ng-if="!customer.addresses.length">
+                            <button class="btn pull-right" ng-click="addAddress($index)"><i class="fa fa-plus" ></i> Add Address</button>    
+                        </div>
+                        <div class="card" ng-repeat="address in customer.addresses">
+                            <div class="card-header">
+                                Address
+                                <button class="btn btn-sm pull-right"><i class="fa fa-minus" ng-click="removeAddress($index)"></i></button>
+                            </div>
+                            <div class="card-block row">
+                                <div class="form-group col-sm-6">
+                                    <label for="city">Flat</label>
+                                    <input type="text" ng-model="address.flat" class="form-control" placeholder="Enter your city">
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label for="postal-code">Street</label>
+                                    <input type="text" ng-model="address.street" class="form-control" id="postal-code" placeholder="Postal Code">
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label for="city">State</label>
+                                    <input type="text" ng-model="address.state" class="form-control" id="city" placeholder="Enter your city">
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label for="postal-code">Postal Code</label>
+                                    <input type="text" ng-model="address.pin" class="form-control" id="postal-code" placeholder="Postal Code">
+                                </div>
+                                <div class="col-sm-12">
+                                    <button class="btn btn-sm pull-right" ng-click="addAddress($index)"><i class="fa fa-plus" ></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-->
+                </div>
+                 <div class="card-footer">
+                    <button ng-click="submit()" type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

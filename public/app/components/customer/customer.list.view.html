@@ -1,0 +1,92 @@
+<div class="animated fadeIn" ng-controller="CustomerCtrl">
+    <div class="row">
+        <div class="row col-md-12 mt-md-1 mb-md-1">
+            <div class="col-md-6">
+                <input ng-change="search()" ng-model="searchText" type="text" class="form-control" placeholder="Search">
+            </div>
+            <div class="col-md-6">
+                <button class="pull-right btn btn-primary" ui-sref="app.customer.new"> Add Customer</button>
+            </div>
+        </div>
+        <div class="card form-control">
+            <div class="card-header">
+                Customer Information
+            </div>
+            <div class="card-block">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th ng-click="sortTable('name')">Name 
+                                <span ng-if="sort.value == 'name'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th ng-click="sortTable('email')">Email
+                            <span ng-if="sort.value == 'email'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th ng-click="sortTable('dob')">Date Of Birth
+                            <span ng-if="sort.value == 'dob'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th ng-click="sortTable('mobile')">Mobile
+                            <span ng-if="sort.value == 'mobile'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th ng-click="sortTable('phone')">Phone
+                            <span ng-if="sort.value == 'phone'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th ng-click="sortTable('addresses')">Addresses
+                            <span ng-if="sort.value == 'addresses'"> 
+                                    <i ng-if="sort.type == 'desc'" class="fa fa-chevron-up"> </i>
+                                    <i ng-if="sort.type == 'asc'" class="fa fa-chevron-down"> </i>
+                                </span>
+                            </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="customer in customers">
+                            <td>{{customer.name}}</td>
+                            <td>{{customer.email}}</td>
+                            <td>{{customer.dob}}</td>
+                            <td>{{customer.mobile}}</td>
+                            <td>{{customer.phone}}</td>
+                            <td>
+                                <p ng-repeat="addresse in customer.addresses">
+                                    {{addresse.flat}}, {{addresse.street}} {{addresse.state}} ({{addresse.pin}})
+                                </p>
+                            </td>
+                            <td>
+                                <a class="fa fa-edit" ui-sref="app.customer.edit({customerId: customer._id})"></a>
+                                <a class="fa fa-remove" href="" ng-click="removeCustomer(customer._id)"></a>
+                                <a class="fa fa-info" ui-sref="app.customer.report({customerId: customer._id})"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul class="pagination pull-right">
+                    <li class="page-item" ><a ng-if="currentPage !== 1" ng-click="changePage(currentPage-1)" class="page-link" href="#">Prev</a>
+                    </li>
+                        <li class="page-item" ng-class="{ 'active' : value == currentPage }" ng-repeat="value in pages">
+                            <a class="page-link" href="#" ng-click="changePage(value)">{{value}}</a>
+                        </li>
+                    </li>
+                    <li class="page-item"><a ng-if="currentPage !== maxPage" ng-click="changePage(currentPage+1)" class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

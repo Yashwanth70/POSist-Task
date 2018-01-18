@@ -1,0 +1,29 @@
+{
+  "name": "POSist-task",
+  "version": "0.0.1",
+  "description": "Task for posist",
+  "main": "app.js",
+  "scripts": {
+    "test": "find ./test -name '*Test.js' | xargs mocha -R spec"
+  },
+  "keywords": [
+    "task",
+    "posist",
+    "customer",
+    "bills"
+  ],
+  "author": "Yashwanth",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^7.3.0",
+    "mocha": "^3.2.0",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.1",
+    "request": "^2.81.0",
+    "superagent": "^3.5.2"
+  }
+}

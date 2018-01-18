@@ -1,0 +1,23 @@
+{
+  "name": "POSist-Task-bower",
+  "version": "1.0.0(AngularJS)",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.0.0",
+    "tether": "latest",
+    "angular": "latest",
+    "angular-ui-router": "1.0.0-beta.3",
+    "oclazyload": "latest",
+    "angular-breadcrumb": "latest",
+    "angular-loading-bar": "latest",
+    "fontawesome": "latest",
+    "simple-line-icons": "latest",
+    "chart.js": "^2.3.0",
+    "angular-chart.js": "^1.0.3",
+    "angular-toastr": "^2.1.1",
+    "angular-animate": "^1.6.4",
+    "ngSweetAlert": "angular-sweetalert#^1.1.2",
+    "sweetalert2": "sweetalert2#v7.3.5"
+  },
+  "private": true
+}
