@@ -11,7 +11,7 @@
 ### Open the MongoDB server after installing mongoDB.Go to C:/MongoDB/Server/3.4/bin/--in 1st termnal and clear the posist dB if you have any :
 
 ```
-mongod
+mongo
 ```
 ```
 use posist
@@ -36,7 +36,7 @@ bower install
 ```
 node app.js
 ```
-
+anh then navigate to : http://localhost:3000/#!/login
 #### User Login Details : 
 ```
 username : admin
